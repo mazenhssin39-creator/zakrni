@@ -1,0 +1,528 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&family=Amiri+Quran&display=swap');
+
+* {
+    font-family: "Cairo Play", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F7F5EF;
+    margin: 0;
+}
+
+.head {
+    text-align: center;
+    background: #123B32;
+    color: #FFFFFF;
+    padding: 10px 0;
+    border: 2px solid gold;
+}
+
+.head h2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.head p {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    flex-direction: row-reverse;
+}
+
+.content i {
+    font-size: 35px;
+    color: #123B32;
+    margin-bottom: 10px;
+}
+
+.sebha-icon {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.sep,
+.mos,
+.sal {
+    text-align: right;
+    width: fit-content;
+    margin: 100px 40px 0;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border: 2px solid gold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sep {
+    margin-left: 10px;
+}
+
+.sep p,
+.mos p,
+.sal p {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.sep h2,
+.mos h2,
+.sal h2 {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.sep:hover,
+.mos:hover,
+.sal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #00000020;
+}
+
+#sebha-page {
+    position: relative;
+    min-height: 100vh;
+    padding: 30px 20px;
+    text-align: center;
+    direction: rtl;
+    background-image: url("islamic-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+}
+
+#ss {
+    width: fit-content;
+    margin: 20px auto;
+    padding: 15px 30px;
+    color: #123B32;
+    background-color: #F7F5EF;
+    border: 2px solid gold;
+    border-radius: 15px;
+    font-size: 32px;
+    position: relative;
+    z-index: 1;
+}
+
+#counter {
+    width: 230px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    padding: 20px;
+    color: #FFFFFF;
+    background-color: #123B32;
+    border: 3px solid gold;
+    border-radius: 20px;
+    font-size: 55px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+#sebha-page button,
+#back-btn-mos,
+#surah-reader button {
+    font-family: inherit;
+    font-size: 20px;
+    padding: 12px 30px;
+    border: 2px solid gold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#tasbeeh-btn,
+#back-btn,
+#back-btn-mos,
+#back-to-surahs {
+    color: white;
+    background-color: #123B32;
+}
+
+#tasbeeh-btn {
+    min-width: 180px;
+}
+
+#reset-btn {
+    color: #123B32;
+    background-color: #F7F5EF;
+}
+
+#back-btn {
+    align-self: flex-start;
+    color: white;
+    background-color: #123B32;
+}
+
+#sebha-page button:hover,
+#surah-reader button:hover,
+#back-btn-mos:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px #00000030;
+}
+
+.azkar-img,
+.azkar-im {
+    position: absolute;
+    top: 50%;
+    width: 500px;
+    height: auto;
+    object-fit: contain;
+    border: none;
+    box-shadow: none;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.azkar-img {
+    left: -10%;
+    right: auto;
+    transform: translateY(-50%) translateY(-10px);
+}
+
+.azkar-im {
+    right: 3%;
+    left: auto;
+    transform: translateY(-50%) translateY(-10px);
+}
+
+#mos_page {
+    min-height: 100vh;
+    padding: 25px 20px;
+    direction: rtl;
+    text-align: center;
+    background-image: url("surah-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#moshaf-title {
+    color: #123B32;
+    font-size: 32px;
+}
+
+#surah-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 25px auto;
+}
+
+.surah-btn {
+    width: 100%;
+    font-family: inherit;
+    font-size: 20px;
+    padding: 12px;
+    color: #123B32;
+    background-color: #FFFFFFE8;
+    border: 2px solid gold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.surah-btn:hover {
+    background-color: #123B32;
+    color: white;
+    transform: translateY(-2px);
+}
+
+#surah-search {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 14px 18px;
+    font-family: inherit;
+    font-size: 18px;
+    text-align: right;
+    direction: rtl;
+    color: #123B32;
+    background-color: #FFFFFFE8;
+    border: 2px solid gold;
+    border-radius: 12px;
+    outline: none;
+}
+
+#surah-search:focus {
+    border-color: #123B32;
+    box-shadow: 0 0 8px #123B3240;
+}
+
+#surah-search::placeholder {
+    color: #777777;
+}
+
+#surah-reader {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 25px;
+    direction: rtl;
+    text-align: center;
+    background-color: #FFFFFFF2;
+    border: 2px solid gold;
+    border-radius: 15px;
+}
+
+#surah-reader button {
+    font-size: 18px;
+    color: white;
+    background: #123B32;
+}
+
+#surah-name {
+    color: #123B32;
+    font-size: 30px;
+}
+
+#surah-status {
+    color: #555;
+    font-size: 16px;
+}
+
+#ayah-list {
+    font-family: "Amiri Quran", serif;
+    font-size: 30px;
+    line-height: 2.5;
+    color: #123B32;
+    text-align: justify;
+    text-align-last: center;
+    overflow-wrap: anywhere;
+    padding: 15px 5px;
+}
+
+.ayah {
+    font-family: "Amiri Quran", serif;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+#prayer-page {
+    min-height: 100vh;
+    padding: 25px 18px;
+    direction: rtl;
+    text-align: center;
+    color: #F7F5EF;
+    background: #123B32;
+}
+
+#prayer-page h2 {
+    color: #D9B45B;
+    font-size: 32px;
+    margin: 30px 0 15px;
+}
+
+#prayer-date,
+#prayer-city,
+#prayer-status {
+    font-size: 17px;
+    margin: 12px 0;
+}
+
+#prayer-city {
+    color: #E4C878;
+}
+
+#prayer-times {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    max-width: 500px;
+    margin: 25px auto;
+}
+
+.prayer-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    min-height: 105px;
+    padding: 18px 10px;
+    background: #FFFFFF12;
+    border: 1px solid #D9B45B;
+    border-radius: 14px;
+}
+
+.prayer-item span {
+    color: #E4C878;
+    font-size: 19px;
+}
+
+.prayer-item strong {
+    color: #FFFFFF;
+    font-size: 25px;
+    direction: ltr;
+}
+
+#back-prayer,
+#refresh-prayers {
+    padding: 11px 22px;
+    border: 2px solid #D9B45B;
+    border-radius: 12px;
+    background: #D9B45B;
+    color: #123B32;
+    font-family: inherit;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#back-prayer {
+    display: block;
+    margin-left: auto;
+}
+
+#back-prayer:hover,
+#refresh-prayers:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px #00000030;
+}
+
+#prayer-status {
+    min-height: 28px;
+}
+
+@media (max-width: 1100px) {
+    .azkar-img,
+    .azkar-im {
+        width: 240px;
+    }
+
+    .azkar-img {
+        left: 2%;
+    }
+
+    .azkar-im {
+        right: 2%;
+    }
+}
+
+@media (max-width: 600px) {
+    .head h2 {
+        font-size: 26px;
+    }
+
+    .head p {
+        font-size: 16px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 15px;
+    }
+
+    .sep,
+    .mos,
+    .sal {
+        width: fit-content;
+        max-width: 100%;
+        margin: 0;
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .sep h2,
+    .mos h2,
+    .sal h2 {
+        font-size: 28px;
+    }
+
+    .sep p,
+    .mos p,
+    .sal p {
+        font-size: 20px;
+    }
+
+    #sebha-page {
+        padding: 20px 15px;
+        gap: 15px;
+    }
+
+    #ss {
+        font-size: 25px;
+        padding: 12px 20px;
+    }
+
+    #counter {
+        width: 180px;
+        min-height: 90px;
+        font-size: 45px;
+    }
+
+    .azkar-img,
+    .azkar-im {
+        position: static;
+        transform: none;
+        width: 150px;
+        max-width: 42%;
+        margin: 5px;
+    }
+
+    #mos_page {
+        padding: 20px 12px;
+        background-attachment: scroll;
+    }
+
+    #moshaf-title {
+        font-size: 27px;
+    }
+
+    .surah-btn {
+        font-size: 18px;
+    }
+
+    #surah-reader {
+        padding: 15px 10px;
+    }
+
+    #ayah-list {
+        font-size: 25px;
+        line-height: 2.4;
+        text-align: center;
+    }
+
+    #prayer-page {
+        padding: 20px 12px;
+    }
+
+    #prayer-page h2 {
+        font-size: 27px;
+    }
+
+    .prayer-item {
+        min-height: 95px;
+        padding: 14px 8px;
+    }
+
+    .prayer-item span {
+        font-size: 17px;
+    }
+
+    .prayer-item strong {
+        font-size: 22px;
+    }
+}

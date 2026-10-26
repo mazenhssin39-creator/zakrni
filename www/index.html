@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ذكرني</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="head" id="main-header">
+        <h2>ذكرني</h2>
+        <p>تطبيق ديني</p>
+    </div>
+
+    <div class="content" id="home">
+        <div class="sep">
+            <img src="sep.png" alt="سبحة إلكترونية" class="sebha-icon">
+            <h2>السبحة</h2>
+            <p>خش سبح الله</p>
+        </div>
+
+        <div class="mos">
+            <i class="fa-solid fa-book-open"></i>
+            <h2>المصحف</h2>
+            <p>اقرأ كتاب الله</p>
+        </div>
+
+        <div class="sal">
+            <i class="fa-regular fa-clock"></i>
+            <h2>مواقيت الصلاة</h2>
+            <p>اعرف توقيت صلاتك</p>
+        </div>
+    </div>
+
+    <div id="sebha-page" style="display: none;">
+        <button id="back-btn">رجوع</button>
+        <img src="azkar.png" alt="أذكار التسبيح" class="azkar-img">
+        <img src="azkar.png" alt="أذكار التسبيح" class="azkar-im">
+        <h2 id="ss">السبحة الإلكترونية</h2>
+        <p id="counter">0</p>
+        <button id="tasbeeh-btn">سبّح</button>
+        <button id="reset-btn">تصفير</button>
+    </div>
+
+    <div id="mos_page" style="display: none;">
+        <button id="back-btn-mos">رجوع</button>
+        <h2 id="moshaf-title">المصحف الشريف</h2>
+        <p>اختر السورة التي تريد قراءتها</p>
+
+        <input
+            type="text"
+            id="surah-search"
+            placeholder="ابحث عن اسم السورة..."
+            autocomplete="off"
+        >
+
+        <div id="surah-list">
+            <button class="surah-btn">1. الفاتحة</button>
+            <button class="surah-btn">2. البقرة</button>
+            <button class="surah-btn">3. آل عمران</button>
+            <button class="surah-btn">4. النساء</button>
+            <button class="surah-btn">5. المائدة</button>
+            <button class="surah-btn">6. الأنعام</button>
+            <button class="surah-btn">7. الأعراف</button>
+            <button class="surah-btn">8. الأنفال</button>
+            <button class="surah-btn">9. التوبة</button>
+            <button class="surah-btn">10. يونس</button>
+            <button class="surah-btn">11. هود</button>
+            <button class="surah-btn">12. يوسف</button>
+            <button class="surah-btn">13. الرعد</button>
+            <button class="surah-btn">14. إبراهيم</button>
+            <button class="surah-btn">15. الحجر</button>
+            <button class="surah-btn">16. النحل</button>
+            <button class="surah-btn">17. الإسراء</button>
+            <button class="surah-btn">18. الكهف</button>
+            <button class="surah-btn">19. مريم</button>
+            <button class="surah-btn">20. طه</button>
+            <button class="surah-btn">21. الأنبياء</button>
+            <button class="surah-btn">22. الحج</button>
+            <button class="surah-btn">23. المؤمنون</button>
+            <button class="surah-btn">24. النور</button>
+            <button class="surah-btn">25. الفرقان</button>
+            <button class="surah-btn">26. الشعراء</button>
+            <button class="surah-btn">27. النمل</button>
+            <button class="surah-btn">28. القصص</button>
+            <button class="surah-btn">29. العنكبوت</button>
+            <button class="surah-btn">30. الروم</button>
+            <button class="surah-btn">31. لقمان</button>
+            <button class="surah-btn">32. السجدة</button>
+            <button class="surah-btn">33. الأحزاب</button>
+            <button class="surah-btn">34. سبأ</button>
+            <button class="surah-btn">35. فاطر</button>
+            <button class="surah-btn">36. يس</button>
+            <button class="surah-btn">37. الصافات</button>
+            <button class="surah-btn">38. ص</button>
+            <button class="surah-btn">39. الزمر</button>
+            <button class="surah-btn">40. غافر</button>
+            <button class="surah-btn">41. فصلت</button>
+            <button class="surah-btn">42. الشورى</button>
+            <button class="surah-btn">43. الزخرف</button>
+            <button class="surah-btn">44. الدخان</button>
+            <button class="surah-btn">45. الجاثية</button>
+            <button class="surah-btn">46. الأحقاف</button>
+            <button class="surah-btn">47. محمد</button>
+            <button class="surah-btn">48. الفتح</button>
+            <button class="surah-btn">49. الحجرات</button>
+            <button class="surah-btn">50. ق</button>
+            <button class="surah-btn">51. الذاريات</button>
+            <button class="surah-btn">52. الطور</button>
+            <button class="surah-btn">53. النجم</button>
+            <button class="surah-btn">54. القمر</button>
+            <button class="surah-btn">55. الرحمن</button>
+            <button class="surah-btn">56. الواقعة</button>
+            <button class="surah-btn">57. الحديد</button>
+            <button class="surah-btn">58. المجادلة</button>
+            <button class="surah-btn">59. الحشر</button>
+            <button class="surah-btn">60. الممتحنة</button>
+            <button class="surah-btn">61. الصف</button>
+            <button class="surah-btn">62. الجمعة</button>
+            <button class="surah-btn">63. المنافقون</button>
+            <button class="surah-btn">64. التغابن</button>
+            <button class="surah-btn">65. الطلاق</button>
+            <button class="surah-btn">66. التحريم</button>
+            <button class="surah-btn">67. الملك</button>
+            <button class="surah-btn">68. القلم</button>
+            <button class="surah-btn">69. الحاقة</button>
+            <button class="surah-btn">70. المعارج</button>
+            <button class="surah-btn">71. نوح</button>
+            <button class="surah-btn">72. الجن</button>
+            <button class="surah-btn">73. المزمل</button>
+            <button class="surah-btn">74. المدثر</button>
+            <button class="surah-btn">75. القيامة</button>
+            <button class="surah-btn">76. الإنسان</button>
+            <button class="surah-btn">77. المرسلات</button>
+            <button class="surah-btn">78. النبأ</button>
+            <button class="surah-btn">79. النازعات</button>
+            <button class="surah-btn">80. عبس</button>
+            <button class="surah-btn">81. التكوير</button>
+            <button class="surah-btn">82. الانفطار</button>
+            <button class="surah-btn">83. المطففين</button>
+            <button class="surah-btn">84. الانشقاق</button>
+            <button class="surah-btn">85. البروج</button>
+            <button class="surah-btn">86. الطارق</button>
+            <button class="surah-btn">87. الأعلى</button>
+            <button class="surah-btn">88. الغاشية</button>
+            <button class="surah-btn">89. الفجر</button>
+            <button class="surah-btn">90. البلد</button>
+            <button class="surah-btn">91. الشمس</button>
+            <button class="surah-btn">92. الليل</button>
+            <button class="surah-btn">93. الضحى</button>
+            <button class="surah-btn">94. الشرح</button>
+            <button class="surah-btn">95. التين</button>
+            <button class="surah-btn">96. العلق</button>
+            <button class="surah-btn">97. القدر</button>
+            <button class="surah-btn">98. البينة</button>
+            <button class="surah-btn">99. الزلزلة</button>
+            <button class="surah-btn">100. العاديات</button>
+            <button class="surah-btn">101. القارعة</button>
+            <button class="surah-btn">102. التكاثر</button>
+            <button class="surah-btn">103. العصر</button>
+            <button class="surah-btn">104. الهمزة</button>
+            <button class="surah-btn">105. الفيل</button>
+            <button class="surah-btn">106. قريش</button>
+            <button class="surah-btn">107. الماعون</button>
+            <button class="surah-btn">108. الكوثر</button>
+            <button class="surah-btn">109. الكافرون</button>
+            <button class="surah-btn">110. النصر</button>
+            <button class="surah-btn">111. المسد</button>
+            <button class="surah-btn">112. الإخلاص</button>
+            <button class="surah-btn">113. الفلق</button>
+            <button class="surah-btn">114. الناس</button>
+        </div>
+
+        <div id="surah-reader" style="display: none;">
+            <button id="back-to-surahs">رجوع للسور</button>
+            <h2 id="surah-name"></h2>
+            <p id="surah-status"></p>
+            <div id="ayah-list"></div>
+        </div>
+    </div>
+
+    <div id="prayer-page" style="display: none;">
+        <button id="back-prayer">رجوع</button>
+
+        <h2>مواقيت الصلاة</h2>
+        <p id="prayer-date">جاري تحميل التاريخ...</p>
+        <p id="prayer-city">دمياط، مصر</p>
+
+        <div id="prayer-times">
+            <div class="prayer-item">
+                <span>الفجر</span>
+                <strong id="fajr">--:--</strong>
+            </div>
+
+            <div class="prayer-item">
+                <span>الشروق</span>
+                <strong id="sunrise">--:--</strong>
+            </div>
+
+            <div class="prayer-item">
+                <span>الظهر</span>
+                <strong id="dhuhr">--:--</strong>
+            </div>
+
+            <div class="prayer-item">
+                <span>العصر</span>
+                <strong id="asr">--:--</strong>
+            </div>
+
+            <div class="prayer-item">
+                <span>المغرب</span>
+                <strong id="maghrib">--:--</strong>
+            </div>
+
+            <div class="prayer-item">
+                <span>العشاء</span>
+                <strong id="isha">--:--</strong>
+            </div>
+        </div>
+
+        <p id="prayer-status" role="status">جاري تحميل المواقيت...</p>
+        <button id="refresh-prayers">تحديث المواقيت</button>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>
